@@ -1,0 +1,52 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+
+
+table{
+   overflow-y:scroll;
+   height:100px;
+   display:block;
+}
+.mainArea {
+	position: absolute;
+	top: 70px;
+	bottom: 20px;
+	left:300px;
+	overflow-y: scroll;
+	width:300px;
+}
+
+
+
+input, textarea {
+  border:1px solid #ccc;
+  min-height:30px;
+  outline: none;
+}
+
+.mainArea input {
+  margin-bottom:15px;
+  margin-top:5px;
+  width:280px;
+}
+
+textarea {
+	margin-bottom:15px;
+  	margin-top:5px;
+	height: 200px;
+  	width:250px;
+}
+
+label {
+	display:block;
+}
+
+button {
+	padding:6px;
+}
+
+
+

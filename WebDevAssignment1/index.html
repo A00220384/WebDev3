@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hardware store</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<link rel="stylesheet" href="css/styles.css" />-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/jquery.dataTables.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+
+</head>
+
+<body>
+   <ul class="nav nav-tabs" role="tablist">
+        <li><a href="#home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-home"></span> home</a></li>
+        <li><a href="#products" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> Product</a></li>
+        <li><a href="#other" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-cog"></span> Other</a></li>   
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" id="home">
+                <h2>Materials</h2>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find Materials</button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Materials</h4>
+                        </div>
+                    <div class="modal-body">
+                        <div class="header">
+                            <input type="text" id="searchKey"/>
+                            <button id="btnSearch">Search</button>
+                            <button id="btnAdd">New Material</button>
+                        </div>
+                        <form id="materialForm" >
+                            <table>
+                                <td><table class="scrollable">
+                                    <tr id="materialList"></tr>
+                                </table></td>
+
+                        
+                                <td><table class="scrollable">
+                                <tr>
+                                    <td><label>Id:</label></td>
+                                    <td><input id="materialId" name="materialId" type="text" disabled /></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Name:</label></td>
+                                    <td><input type="text" id="name" name="name" required /></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Type:</label></td>
+                                    <td><input type="text" id="type" name="type"/></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Quantity:</label></td>
+                                    <td><input type="text" id="quantity" name="quantity"/></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Diameter:</label></td>
+                                    <td><input type="text" id="diameter" name="diameter"/></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Length:</label></td>
+                                    <td><input type="text" id="length" name="length"/></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Thickness:</label></td>
+                                    <td><input type="text" id="thickness" name="thickness" required /></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Outdoor:</label></td>
+                                    <td><input type="text" id="outdoor" name="outdoor"/></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Colour:</label></td>                               
+                                    <td><input type="text" id="colour" name="colour"/></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Price:</label></td>
+                                    <td><input type="text" id="price" name="price"/></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><button id="btnSave">Save</button></td>
+                                    <td><button id="btnDelete">Delete</button></td>
+                                </tr>
+                                    </table></td>
+                            </table>
+                                <img id="pic" height="300"/>
+                            
+                        </form>
+                    </div>                      
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>    
+                  </div>
+                  </div>
+           
+        
+    
+ 
+        <div class="tab-pane" id="products">
+            <table id="table_id" >
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Quantity</th>
+                        <th>Diameter</th>
+                        <th>Length</th>
+                        <th>Thickness</th>
+                        <th>outdoor</th>
+                        <th>colour</th>
+                        <th>Price</th>
+
+                    </tr>
+                    <tbody id="table_body"></tbody>
+            </table>   
+        </div>
+
+        <div class="tab-pane active" id="other">
+            
+    </div>
+    </div>
+</body>
+</html>
